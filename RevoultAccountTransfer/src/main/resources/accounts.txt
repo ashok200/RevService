@@ -1,0 +1,4 @@
+1;ashok;100
+2;revoult;100
+3;nomura;100
+4;db;100

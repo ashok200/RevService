@@ -1,0 +1,87 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.revoult</groupId>
+	<artifactId>RevoultAccountTransfer</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>RevoultAccountTransfer</name>
+	<description>Test for Account Service</description>
+	<!-- <dependencyManagement> <dependencies> https://mvnrepository.com/artifact/javax.ws.rs/javax.ws.rs-api 
+		<dependency> <groupId>org.glassfish.jersey.core</groupId> <artifactId>jersey-server</artifactId> 
+		<version>2.7</version> </dependency> <dependency> <groupId>org.glassfish.jersey.containers</groupId> 
+		<artifactId>jersey-container-servlet-core</artifactId> <version>2.7</version> 
+		</dependency> <dependency> <groupId>org.glassfish.jersey.containers</groupId> 
+		<artifactId>jersey-container-jetty-http</artifactId> <version>2.7</version> 
+		</dependency> <dependency> <groupId>org.glassfish.jersey.media</groupId> 
+		<artifactId>jersey-media-moxy</artifactId> <version>2.7</version> </dependency> 
+		<dependency> <groupId>org.eclipse.jetty.aggregate</groupId> <artifactId>jetty-all</artifactId> 
+		<version>9.0.3.M1</version> </dependency> <dependency> <groupId>junit</groupId> 
+		<artifactId>junit</artifactId> <version>4.12</version> </dependency> </dependencies> 
+		</dependencyManagement> -->
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-server</artifactId>
+			<version>9.2.3.v20140905</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-servlet</artifactId>
+			<version>9.2.3.v20140905</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.core</groupId>
+			<artifactId>jersey-server</artifactId>
+			<version>2.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.containers</groupId>
+			<artifactId>jersey-container-servlet-core</artifactId>
+			<version>2.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.containers</groupId>
+			<artifactId>jersey-container-jetty-http</artifactId>
+			<version>2.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-moxy</artifactId>
+			<version>2.7</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.0</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.revoult.server.RestServer</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
